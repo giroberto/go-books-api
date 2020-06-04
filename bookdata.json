@@ -1,0 +1,58 @@
+{
+    "books": [
+        {
+            "title": "O morro dos ventos uivantes",
+            "author": "Emily Bronte",
+            "rate": 4.7,
+            "ratings": 303,
+            "description": "Único romance da escritora inglesa Emily Bronte, O morro dos ventos uivantes retrata uma trágica historia de amor e obsessão em que os personagens principais são a obstinada e geniosa Catherine Earnshaw e seu irmão adotivo, Heathcliff. Grosseiro, humilhado e rejeitado, ele guarda apenas rancor no coração, mas tem com Catherine um relaciona- mento marcado por amor e, ao mesmo tempo, ódio. Essa ligação perdura mesmo com o casamento de Catherine com Edgar Linton.",
+            "images":{
+                "cover": "https://images-na.ssl-images-amazon.com/images/I/A1nINi18tKL.jpg",
+                "back": "https://images-na.ssl-images-amazon.com/images/I/51G2FTVDK9L.jpg"
+            },
+            "stars": {
+                "one": 2,
+                "two": 0,
+                "three": 6,
+                "four": 13,
+                "five": 79
+            }
+        },
+        {
+            "title": "A revolução dos bichos: Um conto de fadas",
+            "author": "George Orwell",
+            "rate": 4.9,
+            "ratings": 1926,
+            "description": "Escrita em plena Segunda Guerra Mundial e publicada em 1945 depois de ter sido rejeitada por várias editoras, essa pequena narrativa causou desconforto ao satirizar ferozmente a ditadura stalinista numa época em que os soviéticos ainda eram aliados do Ocidente na luta contra o eixo nazifascista.",
+            "images":{
+                "cover": "https://images-na.ssl-images-amazon.com/images/I/81D0qNDMqPL.jpg",
+                "back": "https://images-na.ssl-images-amazon.com/images/I/81+vTajZSrL.jpg"
+            },
+            "stars": {
+                "one": 97,
+                "two": 1,
+                "three": 1,
+                "four": 0,
+                "five": 1
+            }
+        },
+        {
+            "title": "Os segredos da mente milionária",
+            "author": "T. Harv Eker",
+            "rate": 4.8,
+            "ratings": 2743,
+            "description": "Aplicando os princípios que ensina, T. Harv Eker conseguiu superar uma penosa fase de altos e baixos em sua vida e se tornar milionário em apenas dois anos e meio. Hoje ele preside a Peak Potentials Training, uma das mais bem-sucedidas empresas de treinamento pessoal dos Estados Unidos e no Canadá, responsável pela organização de seminários e cursos sobre os princípios da mente milionária que atraem participantes de todo o mundo.",
+            "images":{
+                "cover": "https://images-na.ssl-images-amazon.com/images/I/81ZnJcgjCdL.jpg",
+                "back": "https://images-na.ssl-images-amazon.com/images/I/714Kvk6DZZL.jpg"
+            },
+            "stars": {
+                "one": 89,
+                "two": 7,
+                "three": 2,
+                "four": 1,
+                "five": 1
+            }
+        }
+    ]
+}

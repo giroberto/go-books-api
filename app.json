@@ -1,0 +1,11 @@
+{
+  "name": "Go Books Api",
+  "description": "Go books api",
+  "keywords": [
+    "book",
+    "books",
+    "go"
+  ],
+  "website": "",
+  "repository": "http://github.com/giroberto/go-books-api"
+}
