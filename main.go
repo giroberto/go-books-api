@@ -40,15 +40,20 @@ func main() {
 	r.HandleFunc("/", apiInfo)
 	r.HandleFunc("/books", listBooks)
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+
 	srv := &http.Server{
 		Handler: r,
-		Addr:    "127.0.0.1:8000",
+		Addr:    ":" + port,
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
 
-	fmt.Println("Server running on port 8000")
+	fmt.Println("Server running on port 3000")
 	log.Fatal(srv.ListenAndServe())
 }
 
