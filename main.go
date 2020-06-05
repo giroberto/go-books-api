@@ -1,7 +1,6 @@
 package main
 
 import (
-	"compress/gzip"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -10,6 +9,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/andybalholm/brotli"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
@@ -84,9 +84,11 @@ func listBooks(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal(byteValue, &books)
 
-	w.Header().Set("Content-Encoding", "gzip")
+	w.Header().Set("Content-Encoding", "br")
 	w.Header().Set("Content-Type", "application/json")
-	gzw := gzip.NewWriter(w)
-	defer gzw.Close()
-	json.NewEncoder(gzw).Encode(books)
+	brw := brotli.NewWriterOptions(w, brotli.WriterOptions{Quality: 11})
+	// gzw := gzip.NewWriter(w)
+	// defer gzw.Close()
+	defer brw.Close()
+	json.NewEncoder(brw).Encode(books)
 }
