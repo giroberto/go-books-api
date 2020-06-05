@@ -10,27 +10,37 @@ import (
 	"os"
 	"time"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
-// Books aqui
+// Books field
 type Books struct {
 	Books []Book `json:"books"`
 }
 
-//Image aqui
+//Image field
 type Image struct {
 	Cover string `json:"cover"`
 	Back  string `json:"back"`
 }
 
-// Book aqui
+// Stars field
+type Stars struct {
+	One   int8 `json:"one"`
+	Two   int8 `json:"two"`
+	Three int8 `json:"three"`
+	Four  int8 `json:"four"`
+	Fiver int8 `json:"five"`
+}
+
+// Book field
 type Book struct {
 	Title       string  `json:"title"`
 	Author      string  `json:"author"`
 	Rate        float32 `json:"rate"`
-	Ratings     int8    `json:"ratings"`
+	Stars       Stars   `json:"stars"`
 	Description string  `json:"description"`
 	Image       Image   `json:"images"`
 }
@@ -44,16 +54,15 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
-
 	srv := &http.Server{
-		Handler: r,
+		Handler: handlers.CORS()(r),
 		Addr:    ":" + port,
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
 
-	fmt.Println("Server running on port 3000")
+	fmt.Println("Server running on port " + port)
 	log.Fatal(srv.ListenAndServe())
 }
 
